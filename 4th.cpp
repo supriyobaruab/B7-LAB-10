@@ -8,13 +8,15 @@ struct Grocery
     int sale;
 };
 
-Grocery items[6];
-
 int main()
 {
+    int size;
+    cout << "Enter the amount of category items were sold :";
+    cin >> size;
+    Grocery items[size];
     int totalSales = 0;
 
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < size; i++)
     {
         cout << "Enter details for item " << i + 1 << ":" << endl;
         cout << "How many items were sold this month? ";
@@ -25,7 +27,7 @@ int main()
         items[i].sale = items[i].item * items[i].price;
         totalSales += items[i].sale;
     }
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < size; i++)
     {
         cout << "Total sale for item " << i + 1 << ": " << items[i].sale << endl;
         cout << "--------------------------" << endl;
